@@ -1,6 +1,10 @@
 %**** by Shoa Russell 
 %**** Heart Rate detection 
-% can edit
+% takes in ecg data and "TAP" data from ADXL345 that are stored in 
+% ecgdata and flagdata, flagdata value is incremented when a TAP is detected
+% else its decremented until its at zero. Everytime the ECG data is recorded the value of "tap" is 
+% also recorded in flagdata. thus both arrays are the same size. 
+% can edit out the k, pathname, and Shortendname if you dont want file saved at the end 
 function Heartbeats = rpeak_Shoa(ecgData,flagData,k,pathName,ShortEndName)
 %clearvars -except ecgData
 sample_freq=250;
